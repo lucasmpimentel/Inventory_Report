@@ -10,7 +10,7 @@ class SimpleReport:
 
         for product in list:
             lista_de_fabricacoes.append(
-                datetime.strptime(product["data_de_fabricacao"], "%Y-%m-%d")
+                datetime.strp time(product["data_de_fabricacao"], "%Y-%m-%d")
             )
             lista_de_validades.append(
                 datetime.strptime(product["lista_de_validades"], "%Y-%m-%d")
@@ -27,5 +27,5 @@ class SimpleReport:
         return (
             f"Data de fabricação mais antiga: {fabricacao_antiga}\n"
             f"Data de validade mais próxima: {validade_proxima}\n"
-            f"Empresa com mais produtos: {maior_fornecedor}\n"
+            f"Empresa com mais produtos: {maior_fornecedor}"
         )
