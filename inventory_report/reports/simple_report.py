@@ -10,10 +10,10 @@ class SimpleReport:
 
         for product in list:
             lista_de_fabricacoes.append(
-                datetime.strp time(product["data_de_fabricacao"], "%Y-%m-%d")
+                datetime.strptime(product["data_de_fabricacao"], "%Y-%m-%d")
             )
             lista_de_validades.append(
-                datetime.strptime(product["lista_de_validades"], "%Y-%m-%d")
+                datetime.strptime(product["data_de_validade"], "%Y-%m-%d")
             )
             if product["nome_da_empresa"] in lista_de_empresas:
                 lista_de_empresas[product["nome_da_empresa"]] += 1
