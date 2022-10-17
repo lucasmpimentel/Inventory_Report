@@ -19,7 +19,7 @@ class SimpleReport:
                 lista_de_empresas[product["nome_da_empresa"]] += 1
             else:
                 lista_de_empresas[product["nome_da_empresa"]] = 1
-        
+
         fabricacao_antiga = min(lista_de_fabricacoes).date()
         validade_proxima = min(lista_de_validades).date()
         maior_fornecedor = max(lista_de_empresas, key=lista_de_empresas.get)
