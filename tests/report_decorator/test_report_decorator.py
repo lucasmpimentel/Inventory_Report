@@ -32,16 +32,13 @@ def test_decorar_relatorio():
                     "instrucoes_de_armazenamento": "é só um teste"
                 }
     ]
-    pass_results = {
-        "fab": "2022-01-02",
-        "val": "2022-12-11",
-        "emp": "Empresa Fantasma"
-    }
-
+    fb = "2022-01-02",
+    val = "2022-12-11",
+    emp = "Empresa Fantasma"
     result = ColoredReport(SimpleReport).generate(mock)
 
     assert result == (
-        f"\033[32mData de fabricação mais antiga:\033[0m \033[36m{pass_results['fab']}\033[0m\n"
-        f"\033[32mData de validade mais próxima:\033[0m \033[36m{pass_results['val']}\033[0m\n"
-        f"\033[32mEmpresa com mais produtos:\033[0m \033[31m{pass_results['emp']}\033[0m"
+        f"\033[32mData de fabricação mais antiga:\033[0m \033[36m{fb}\033[0m\n"
+        f"\033[32mData de validade mais próxima:\033[0m \033[36m{val}\033[0m\n"
+        f"\033[32mEmpresa com mais produtos:\033[0m \033[31m{emp}\033[0m"
     )
