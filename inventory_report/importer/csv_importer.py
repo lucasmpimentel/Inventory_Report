@@ -3,10 +3,11 @@ import csv
 
 
 class CsvImporter(Importer):
-    @classmethod
-    def import_data(self, path):
-        with open(path) as file:
-            if path.endswith(".csv"):
-                return list(csv.DictReader(file))
-            else:
-                raise ValueError("Arquivo inválido")
+    def import_data(path):
+        if not path.endswith(".csv"):
+            raise ValueError("Arquivo inválido")
+        with open(path, encoding="utf-8") as file:
+            reader = csv.DictReader(file, delimiter=",", quotechar='"')
+            result = list(csv_info for csv_info in reader)
+
+        return result
