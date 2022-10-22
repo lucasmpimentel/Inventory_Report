@@ -32,8 +32,8 @@ def test_decorar_relatorio():
                     "instrucoes_de_armazenamento": "é só um teste"
                 }
     ]
-    fb = "2022-01-02",
-    val = "2022-12-11",
+    fb = "2022-01-02"
+    val = "2022-12-11"
     emp = "Empresa Fantasma"
     result = ColoredReport(SimpleReport).generate(mock)
 
